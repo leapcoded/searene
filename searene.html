@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Searene</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen flex flex-col">
+  <header class="app-header sticky top-0 z-40 border-b border-black/10 dark:border-white/10">
+  <div class="w-full px-4 py-3 flex items-center gap-3">
+      <div id="header-logo" class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400"></div>
+      <div class="ml-auto flex items-center gap-2">
+        <button id="theme-toggle-header" class="nav-btn button-muted rounded-md px-3 py-2 theme-switch" aria-label="Toggle theme">
+          <span class="theme-switch-track" aria-hidden="true">
+            <span class="theme-icon sun">☀️</span>
+            <span class="theme-icon moon">🌙</span>
+            <span class="theme-switch-knob" aria-hidden="true"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="app-content" class="flex-1 w-full px-4 py-8 flex flex-col"></main>
+
+  <nav class="sticky bottom-0 w-full p-2 bottom-nav border-t border-black/10 dark:border-white/10 backdrop-blur card">
+  <div class="w-full grid grid-cols-6 gap-1">
+      <button id="home-tab-btn" class="nav-btn py-2" aria-selected="true">Home</button>
+      <button id="checkin-tab-btn" class="nav-btn py-2" aria-selected="false">Check-In</button>
+      <button id="journal-tab-btn" class="nav-btn py-2" aria-selected="false">Journal</button>
+      <button id="patterns-tab-btn" class="nav-btn py-2" aria-selected="false">Patterns</button>
+      <button id="compass-tab-btn" class="nav-btn py-2" aria-selected="false">Compass</button>
+  <button id="somatic-tab-btn" class="nav-btn py-2" aria-selected="false">Somatic Exercises</button>
+    </div>
+  </nav>
+
+  <script src="src/utils.js?v=20250920"></script>
+  <script src="src/theme.js?v=20250920"></script>
+  <script src="src/modules/anchors.js?v=20250920"></script>
+  <script src="src/modules/home.js?v=20250920"></script>
+  <script src="src/modules/checkin.js?v=20250920"></script>
+  <script src="src/modules/journal.js?v=20250920"></script>
+  <script src="src/modules/patterns.js?v=20250920"></script>
+  <script src="src/modules/compass.js?v=20250920"></script>
+  <script src="src/modules/somatic.js?v=20250920"></script>
+  <script src="src/modules/mini_timer.js?v=20250920"></script>
+  <script src="src/modules/breathing.js?v=20250920"></script>
+  <script src="src/main.js?v=20250920"></script>
+</body>
+</html>
